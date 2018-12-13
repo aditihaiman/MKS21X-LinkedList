@@ -1,16 +1,18 @@
 public class MyNode {
-  private int data;
+  private Integer data;
   private MyNode next, prev;
 
-  public MyNode(int num) {
+  public MyNode(Integer num) {
     data = num;
   }
 
-  public MyNode(int num, MyNode nodeN, MyNode nodeP) {
+  public MyNode(Integer num, MyNode nodeN, MyNode nodeP) {
     data = num;
     next = nodeN;
     prev = nodeP;
   }
+
+  // --- Methods are self-explanatory --- //
 
   public void setNext(MyNode n) {
     next = n;
@@ -20,12 +22,20 @@ public class MyNode {
     prev = p;
   }
 
+  public void setData(Integer num) {
+    data = num;
+  }
+
   public MyNode next() {
     return next;
   }
 
   public MyNode prev() {
     return prev;
+  }
+
+  public MyNode data() {
+    return data;
   }
 
   public String toString() {
