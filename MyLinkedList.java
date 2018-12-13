@@ -43,5 +43,18 @@ public class MyLinkedList {
     return output.substring(0, output.length()-2) + "]";
   }
 
+  public Integer get(int index) {
+    if (index < 0 || index >= length) throw new IndexOutOfBoundsException();
+    MyNode current = start.next();
+    Integer output = 0;
+    for (int x = 0; x < length; x++) {
+      if (x == index) {
+        output = current.data();
+      }
+      current = current.next();
+    } // by this point, output should be the value at the index, unless index was out of bounds
+    return output;
+  }
+
 
 }

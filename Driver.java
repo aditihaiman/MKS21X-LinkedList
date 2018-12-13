@@ -3,7 +3,10 @@ public class Driver {
 
     MyLinkedList list = new MyLinkedList();
     System.out.println(list);
-    list.add(8);
+    for (int x = 0; x < 10; x++) {
+      list.add(x);
+    }
+
     System.out.println(list);
 
   }
