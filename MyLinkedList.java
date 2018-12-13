@@ -33,11 +33,14 @@ public class MyLinkedList {
   }
 
   public String toString() {
-    String output = "";
+    if (length == 0) return "[]"; //empty list exception
+    String output = "[";
     MyNode current = start.next();
-    while (current != null)
-
-    return output;
+    while (current.data() != null) { //loops through all nodes between start and end
+      output += current.data() + ", ";
+      current = current.next();
+    }
+    return output.substring(0, output.length()-2) + "]";
   }
 
 
