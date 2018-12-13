@@ -70,7 +70,14 @@ public class MyLinkedList {
     return output;
   }
 
+  public void add(int index, Integer value) {
+    if (index < 0 || index >= length) throw new IndexOutOfBoundsException();
 
+  }
+
+
+
+// -- Helper Method -- //
 
   private MyNode getNthNode(int index) { //private helper method to find node at an index
     MyNode current = start.next();
