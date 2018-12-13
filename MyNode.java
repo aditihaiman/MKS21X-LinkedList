@@ -3,6 +3,10 @@ public class MyNode {
   private MyNode next;
   private MyNode previous;
 
+  public MyNode(int num) {
+    data = num;
+  }
+
   public MyNode(int num, MyNode nodeN, MyNode nodeP) {
     data = num;
     next = nodeN;
@@ -23,6 +27,14 @@ public class MyNode {
 
   public int getData() {
     return data;
+  }
+
+  public MyNode getNext() {
+    return next;
+  }
+
+  public MyNode getPrevious() {
+    return previous;
   }
 
 
