@@ -48,7 +48,27 @@ public class MyLinkedList {
     return getNthNode(index).data();
   }
 
+  public Integer set(int index, Integer value) {
+    Integer output = getNthNode(index).data();
+    getNthNode(index).setData(value);
+    return output;
+  }
 
+  public boolean contains(Integer value) {
+    boolean output = false;
+    for (int x = 0; x < length; x++) {
+      if (getNthNode(x).data() == value) output = true;
+    }
+    return output;
+  }
+
+  public int indexOf(Integer value) {
+    int output = -1;
+    for (int x = 0; x < length; x++) {
+      if (getNthNode(x).data()==value) output = x;
+    }
+    return output;
+  }
 
 
 
