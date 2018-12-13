@@ -12,9 +12,13 @@ public class MyLinkedList {
   }
 
   public String toString() {
-    String output = "";
-
-    return output;
+    current = start.getNext();
+    String output = "[" + start.getData();
+    while (current != end) {
+      output += ", " + current.getData();
+      current = current.getNext();
+    }
+    return output + end.getData();
   }
 
 
