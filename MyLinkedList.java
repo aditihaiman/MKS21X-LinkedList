@@ -45,14 +45,22 @@ public class MyLinkedList {
 
   public Integer get(int index) {
     if (index < 0 || index >= length) throw new IndexOutOfBoundsException();
+    return getNthNode(index).data();
+  }
+
+
+
+
+
+  private MyNode getNthNode(int index) { //private helper method to find node at an index
     MyNode current = start.next();
-    Integer output = 0;
+    MyNode output = current;
     for (int x = 0; x < length; x++) {
       if (x == index) {
-        output = current.data();
+        output = current;
       }
       current = current.next();
-    } // by this point, output should be the value at the index, unless index was out of bounds
+    }
     return output;
   }
 
