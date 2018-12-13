@@ -16,13 +16,13 @@ public class MyLinkedList {
 
   public boolean add(Integer value) {
     MyNode newNode = new MyNode(value);
-    if (length == 0) {
+    if (length == 0) { //exception, if an empty list, then add inbetween start and end
       start.setNext(newNode);
       newNode.setNext(end);
       newNode.setPrev(start);
       end.setPrev(newNode);
     }
-    else{
+    else{ //else, add before end, after end.prev
       newNode.setPrev(end.prev());
       end.prev().setNext(newNode);
       end.setPrev(newNode);
@@ -33,13 +33,11 @@ public class MyLinkedList {
   }
 
   public String toString() {
-    // current = start.next();
-    // String output = "[" + start.getData();
-    // while (current != end) {
-    //   output += ", " + current.getData();
-    //   current = current.getNext();
-    // }
-    // return output + end.getData();
+    String output = "";
+    MyNode current = start.next();
+    while (current != null)
+
+    return output;
   }
 
 
