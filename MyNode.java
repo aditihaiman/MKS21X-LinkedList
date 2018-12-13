@@ -1,7 +1,6 @@
 public class MyNode {
   private int data;
-  private MyNode next;
-  private MyNode previous;
+  private MyNode next, prev;
 
   public MyNode(int num) {
     data = num;
@@ -10,31 +9,27 @@ public class MyNode {
   public MyNode(int num, MyNode nodeN, MyNode nodeP) {
     data = num;
     next = nodeN;
-    previous = nodeP;
-  }
-
-  public void setData(int num) {
-    data = num;
+    prev = nodeP;
   }
 
   public void setNext(MyNode n) {
     next = n;
   }
 
-  public void setPrevious(MyNode p) {
-    previous = p;
+  public void setPrev(MyNode p) {
+    prev = p;
   }
 
-  public int getData() {
-    return data;
-  }
-
-  public MyNode getNext() {
+  public MyNode next() {
     return next;
   }
 
-  public MyNode getPrevious() {
-    return previous;
+  public MyNode prev() {
+    return prev;
+  }
+
+  public String toString() {
+    return "" + data;
   }
 
 
