@@ -34,7 +34,7 @@ public class MyNode {
     return prev;
   }
 
-  public MyNode data() {
+  public Integer data() {
     return data;
   }
 
