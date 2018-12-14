@@ -75,8 +75,8 @@ public class MyLinkedList {
 
   public void add(int index, Integer value) {
     if (index < 0 || index >= length) throw new IndexOutOfBoundsException();
-    MyNode current = start.next();
-    for (int x = 0; x < length - 1; x++) {
+    MyNode current = start;
+    for (int x = 0; x < length; x++) {
       if (x==index) {
         MyNode newN = new MyNode(value, current.next(), current);
         current.setNext(newN);
