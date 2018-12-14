@@ -57,7 +57,7 @@ public class MyLinkedList {
   public boolean contains(Integer value) {
     MyNode current = start.next();
     boolean output = false;
-    for (int x = 0; x < length; x++) {
+    for (int x = 0; x < length - 1; x++) {
       if (current.data().equals(value)) output = true;
       current = current.next();
     }
@@ -67,7 +67,7 @@ public class MyLinkedList {
   public int indexOf(Integer value) {
     MyNode current = start.next();
     int output = -1;
-    for (int x = 0; x < length; x++) {
+    for (int x = 0; x < length - 1; x++) {
       if (current.data().equals(value)) output = x;
       current = current.next();
     }
