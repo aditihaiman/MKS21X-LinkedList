@@ -49,8 +49,7 @@ public class MyLinkedList {
   }
 
   public Integer set(int index, Integer value) {
-    // Integer output = getNthNode(index).data();
-    // getNthNode(index).setData(value);
+    if (index < 0 || index >= length) throw new IndexOutOfBoundsException();
     return getNthNode(index).setData(value);
   }
 
