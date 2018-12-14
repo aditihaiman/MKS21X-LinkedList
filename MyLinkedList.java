@@ -57,7 +57,7 @@ public class MyLinkedList {
   public boolean contains(Integer value) {
     boolean output = false;
     for (int x = 0; x < length; x++) {
-      if (getNthNode(x).data() == value) output = true;
+      if (getNthNode(x).data().equals(value)) output = true;
     }
     return output;
   }
@@ -65,7 +65,7 @@ public class MyLinkedList {
   public int indexOf(Integer value) {
     int output = -1;
     for (int x = 0; x < length; x++) {
-      if (getNthNode(x).data()==value) output = x;
+      if (getNthNode(x).data().equals(value)) output = x;
     }
     return output;
   }
@@ -75,10 +75,17 @@ public class MyLinkedList {
 
   }
 
+  public Integer remove(int index) {
+    if (index < 0 || index >= length) throw new IndexOutOfBoundsException();
+    MyNode node = getNthNode(index);
+    node.prev().setNext(node.next());
+    node.next().setPrev(node.prev());
+    return node.data();
+  }
 
 
 // -- Helper Method -- //
-
+//linear
   private MyNode getNthNode(int index) { //private helper method to find node at an index
     MyNode current = start.next();
     MyNode output = current;
