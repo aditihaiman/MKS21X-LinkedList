@@ -22,8 +22,10 @@ public class MyNode {
     prev = p;
   }
 
-  public void setData(Integer num) {
+  public Integer setData(Integer num) {
+    Integer output = data;
     data = num;
+    return output;
   }
 
   public MyNode next() {

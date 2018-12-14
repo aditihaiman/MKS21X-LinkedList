@@ -49,9 +49,9 @@ public class MyLinkedList {
   }
 
   public Integer set(int index, Integer value) {
-    Integer output = getNthNode(index).data();
-    getNthNode(index).setData(value);
-    return output;
+    // Integer output = getNthNode(index).data();
+    // getNthNode(index).setData(value);
+    return getNthNode(index).setData(value);
   }
 
   public boolean contains(Integer value) {
