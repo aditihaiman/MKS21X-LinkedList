@@ -86,6 +86,7 @@ public class MyLinkedList {
       }
       current = current.next();
     }
+    length++;
   }
 
   public Integer remove(int index) {
@@ -93,6 +94,7 @@ public class MyLinkedList {
     MyNode node = getNthNode(index);
     node.prev().setNext(node.next());
     node.next().setPrev(node.prev());
+    length--;
     return node.data();
   }
 
