@@ -55,17 +55,21 @@ public class MyLinkedList {
   }
 
   public boolean contains(Integer value) {
+    MyNode current = start.next();
     boolean output = false;
     for (int x = 0; x < length; x++) {
-      if (getNthNode(x).data().equals(value)) output = true;
+      if (current.data().equals(value)) output = true;
+      current = current.next();
     }
     return output;
   }
 
   public int indexOf(Integer value) {
+    MyNode current = start.next();
     int output = -1;
     for (int x = 0; x < length; x++) {
-      if (getNthNode(x).data().equals(value)) output = x;
+      if (current.data().equals(value)) output = x;
+      current = current.next();
     }
     return output;
   }
@@ -83,6 +87,11 @@ public class MyLinkedList {
     return node.data();
   }
 
+  public boolean remove(Integer value){
+    if (!contains(value)) return false;
+
+    return true;
+  }
 
 // -- Helper Method -- //
 //linear
