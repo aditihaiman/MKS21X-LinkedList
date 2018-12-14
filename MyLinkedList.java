@@ -89,7 +89,7 @@ public class MyLinkedList {
 
   public boolean remove(Integer value){
     if (!contains(value)) return false;
-
+    remove(indexOf(value));
     return true;
   }
 
