@@ -56,7 +56,7 @@ public class MyLinkedList {
   public boolean contains(Integer value) {
     MyNode current = start.next();
     boolean output = false;
-    for (int x = 0; x < length - 1; x++) {
+    for (int x = 0; x < length - 1; x++) { //loops through list, if value exists then output is set to true
       if (current.data().equals(value)) output = true;
       current = current.next();
     }
@@ -76,7 +76,7 @@ public class MyLinkedList {
   public void add(int index, Integer value) {
     if (index < 0 || index >= length) throw new IndexOutOfBoundsException();
     MyNode current = start;
-    for (int x = 0; x < length; x++) {
+    for (int x = 0; x < length; x++) { //loops through, when it reaches the index specified, sets data to value
       if (x==index) {
         MyNode newN = new MyNode(value, current.next(), current);
         current.setNext(newN);
