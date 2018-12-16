@@ -74,18 +74,21 @@ public class MyLinkedList {
   }
 
   public void add(int index, Integer value) {
-    if (index < 0 || index >= length) throw new IndexOutOfBoundsException();
+    if (index < 0 || index > length) throw new IndexOutOfBoundsException();
     MyNode current = start;
-    for (int x = 0; x < length; x++) { //loops through, when it reaches the index specified, sets data to value
-      if (x==index) {
-        MyNode newN = new MyNode(value, current.next(), current);
-        current.setNext(newN);
-        newN.next().setPrev(newN);
+    if (index == length) add(value);
+    else {
+      for (int x = 0; x < length; x++) { //loops through, when it reaches the index specified, sets data to value
+        if (x==index) {
+          MyNode newN = new MyNode(value, current.next(), current);
+          current.setNext(newN);
+          newN.next().setPrev(newN);
+          current = current.next();
+        }
         current = current.next();
       }
-      current = current.next();
-    }
     length++;
+    }
   }
 
   public Integer remove(int index) {
