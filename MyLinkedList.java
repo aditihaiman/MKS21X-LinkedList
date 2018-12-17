@@ -106,6 +106,13 @@ public class MyLinkedList {
     return true;
   }
 
+  public void extend(MyLinkedList other) {
+    this.end.prev().setNext(other.start.next()); // combines the first and last elements
+    other.start.next().setPrev(this.end.prev()); // of the two lists
+  }
+
+
+
 // -- Helper Method -- //
 //linear
   private MyNode getNthNode(int index) { //private helper method to find node at an index
