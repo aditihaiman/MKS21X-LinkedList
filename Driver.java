@@ -124,6 +124,22 @@ public class Driver {
     System.out.println("After extending, b should be []: " + b);
     System.out.println("Size of a should be 10: " + a.size());
     System.out.println("Size of b should be 0: " + b.size());
+    System.out.println();
+    a.extend(b);
+    System.out.println("Trying to extend b (now empty) to a, a should be the same: " + a);
+    System.out.println("b should still be []: " + b);
+    System.out.println();
+    System.out.println("----Changing a and b----");
+    a = new MyLinkedList();
+    b.add(5);
+    b.add(7);
+    System.out.println("a should be []: " + a);
+    System.out.println("b should be [5, 7]: " + b);
+    a.extend(b);
+    System.out.println("after a.extend(b), a should be [5, 7]: " + a);
+    System.out.println("b should still be []: " + b);
+    System.out.println("size of a should be 2: " + a.size());
+    System.out.println("size of b should be 0: " + b.size());
     System.out.println("--------- END OF TEST ----------");
 
   }

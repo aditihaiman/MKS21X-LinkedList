@@ -107,15 +107,18 @@ public class MyLinkedList {
   }
 
   public void extend(MyLinkedList other) {
-    this.end.prev().setNext(other.start.next()); // combines the first and last elements
-    other.start.next().setPrev(this.end.prev()); // of the two lists
-    this.end = new MyNode(null); //removes the start and end of the two lists
-    this.length+=other.length;
-    other.length=0;
-    System.out.println("/////OTHER: " + other);
-    //other = new MyLinkedList();
-    System.out.println("/////OTHER2: " + other);
-    System.out.println("/////THIS: " + this);
+    if (other.size()!=0) { //ignores case where other is empty
+      if (this.size()== 0) { //checks special case where this is empty
+        this.start.setNext(other.start.next());
+        other.start.next().setPrev(this.start);
+      }
+      else {
+        this.end.prev().setNext(other.start.next()); // combines the first and last elements
+        other.start.next().setPrev(this.end.prev()); // of the two lists
+      }
+      this.length+=other.length; //fixes lengths
+      other.length=0;
+    }
   }
 
 
