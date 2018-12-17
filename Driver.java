@@ -109,6 +109,21 @@ public class Driver {
     System.out.println("Current list: " + list);
     System.out.println();
     System.out.println();
+
+    System.out.println("---- Testing Extend with two LinkedLists: a and b----");
+    MyLinkedList a = new MyLinkedList();
+    MyLinkedList b = new MyLinkedList();
+    for (int x = 0; x < 5; x++) {
+      a.add(x);
+      b.add(x+5);
+    }
+    System.out.println("linkedlist a should be [0, 1, 2, 3, 4]: " + a);
+    System.out.println("linkedlist b should be [5, 6, 7, 8, 9]: " + b);
+    a.extend(b);
+    System.out.println("After a.extend(b), a should be [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]: " + a);
+    System.out.println("After extending, b should be []: " + b);
+    System.out.println("Size of a should be 10: " + a.size());
+    System.out.println("Size of b should be 0: " + b.size());
     System.out.println("--------- END OF TEST ----------");
 
   }
