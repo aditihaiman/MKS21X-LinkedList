@@ -39,10 +39,11 @@ public class Driver3 {
         System.out.println("This should print: \"[0, 1, 2, 3, 4, 5, 6, 7, 8, 9]\"");
 
         //Step Five: Remove a value from the list by value
+        Integer num = 9;
         System.out.println("#####################################");
         System.out.println("##Remove a Value by its Value Test:##");
         System.out.println("#####################################");
-        list.remove(new Integer(9));
+        list.remove(num);
         System.out.println(list);
         System.out.println("This should print: \"[0, 1, 2, 3, 4, 5, 6, 7, 8]\"");
 
@@ -50,7 +51,8 @@ public class Driver3 {
         System.out.println("##############################");
         System.out.println("##Checking Containment Test:##");
         System.out.println("##############################");
-        System.out.println(list.contains(new Integer(999)));
+        num = 999;
+        System.out.println(list.contains(num));
         System.out.println("This should print: false");
 
         //Step Seven: Testing the Size Method
@@ -88,7 +90,7 @@ public class Driver3 {
             e.printStackTrace();
         }
         try {
-            list.add(-1, new Integer(9));
+            list.add(-1, 9);
         } catch(IndexOutOfBoundsException B) {
             System.out.println("Adding to a negative index throws the correct exception");
         } catch(Exception e) {
@@ -96,7 +98,7 @@ public class Driver3 {
             e.printStackTrace();
         }
         try {
-            list.add(90000, new Integer(69));
+            list.add(90000, 69);
         } catch(IndexOutOfBoundsException B) {
             System.out.println("Adding to an oversized index throws the correct exception");
         } catch(Exception e) {
@@ -104,7 +106,7 @@ public class Driver3 {
             e.printStackTrace();
         }
         try {
-            list.set(-1, new Integer(9));
+            list.set(-1, 9);
         } catch(IndexOutOfBoundsException B) {
             System.out.println("Setting a negative index throws the correct exception");
         } catch(Exception e) {
@@ -112,7 +114,7 @@ public class Driver3 {
             e.printStackTrace();
         }
         try {
-            list.set(90000, new Integer(69));
+            list.set(90000, 69);
         } catch(IndexOutOfBoundsException B) {
             System.out.println("Setting an oversized index throws the correct exception");
         } catch(Exception e) {
@@ -152,13 +154,13 @@ public class Driver3 {
         System.out.println("This should print: [1, 2, 3, 4, 5, 6, 7]\n");
 
         System.out.println("Adding to Last Element:");
-        list.add(7, new Integer(8));
+        list.add(7, 8);
         System.out.println(list);
         System.out.println("This should print: [1, 2, 3, 4, 5, 6, 7, 8]\n");
         System.out.println(list.size());
 
         System.out.println("Adding to First Element:");
-        list.add(0, new Integer(666));
+        list.add(0, 666);
         System.out.println(list);
         System.out.println("This should print: [666, 1, 2, 3, 4, 5, 6, 7, 8]\n");
     }
