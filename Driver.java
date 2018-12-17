@@ -62,10 +62,13 @@ public class Driver {
 
     System.out.println("---- Testing contains and indexOf ----");
     System.out.println();
+    System.out.println("Current list: " + list);
     System.out.println("list.contains(6) should print true: " + list.contains(6));
     System.out.println("list.contains(70) should print false: " + list.contains(70));
     System.out.println("list.indexOf(4) should print 3: " + list.indexOf(4));
     System.out.println("list.indexOf(50) should print -1: " + list.indexOf(50));
+    System.out.println("list.indexOf(1) should print 0: " + list.indexOf(1));
+    System.out.println("list.indexOf(10) should print 9: " + list.indexOf(10));
     System.out.println();
     System.out.println();
 
