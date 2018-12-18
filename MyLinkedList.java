@@ -118,7 +118,7 @@ public class MyLinkedList {
       }
       this.length+=other.length; //fixes lengths
       other.length=0;
-    }
+    } 
   }
 
 
